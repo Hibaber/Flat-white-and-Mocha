@@ -39,6 +39,7 @@ nav {
   background-color: black;
 }
 
+<<<<<<< HEAD
 /* --- Index --- */
 
 .index-container{
@@ -47,8 +48,14 @@ nav {
 }
 
 /* --- Details --- */
+=======
+>>>>>>> refs/remotes/origin/main
 #myMap{
   height:300px; 
   background-color:antiquewhite;
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> refs/remotes/origin/main
