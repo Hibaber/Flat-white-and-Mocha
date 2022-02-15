@@ -1,10 +1,9 @@
 const router = require('express').Router();
 
-//no requieren llamar a ningún modelo.
 
 /* benefits  */
-router.get("/caffee/beneficios", (req, res, next) => {
-   res.render("./caffee/benefits_page") // los puntos están reservados
+router.get("/coffee-benefits", (req, res, next) => {
+   res.render("coffee/benefits_page") 
 });
 
 module.exports = router;

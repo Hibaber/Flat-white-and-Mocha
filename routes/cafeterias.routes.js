@@ -4,7 +4,7 @@ const cafeteria = require ('../models/Cafeteria.model')
 
 // Cafeteria List
 
-router.get('/cafeteria', (req, res, next) => {
+router.get('/cafeterias', (req, res, next) => {
   
   cafeteria
     .find()
@@ -14,12 +14,12 @@ router.get('/cafeteria', (req, res, next) => {
 
 // Add new Cafeteria
 
-router.get('/cafeteria/nueva', (req, res, next) => {
+router.get('/create-cafeteria', (req, res, next) => {
  res.render('cafeteria/create_form')
  .catch(err => console.log (err))
 });
 
-router.post('/cafeteria/nueva', (req, res, next) => {
+router.post('/create-cafeteria', (req, res, next) => {
 
   const {name, type, image, location, description, transport, website, rating} = req.body
 
@@ -31,7 +31,7 @@ router.post('/cafeteria/nueva', (req, res, next) => {
 });
 
 // Edit cafeteria
-router.get('/cafeteria/:id/editar', (req, res, next) => {
+router.get('/edit/:id/cafeteria', (req, res, next) => {
 
     const {id} = req.params
 
@@ -42,7 +42,7 @@ router.get('/cafeteria/:id/editar', (req, res, next) => {
 
 });
 
-router.post('/cafeteria/:id/editar', (req, res, next) => {
+router.post('/edit/:id/cafeteria', (req, res, next) => {
 
   const {id} = req.params
   const { name, type, image, location, description, transport, website, rating } = req.body
@@ -58,7 +58,7 @@ router.post('/cafeteria/:id/editar', (req, res, next) => {
 
 
 // Delete cafeteria
-router.post('/cafeteria/:id/eliminar', (req, res, next) => {
+router.post('/delete/:id/cafeteria', (req, res, next) => {
   
   const {id}= req.params
 

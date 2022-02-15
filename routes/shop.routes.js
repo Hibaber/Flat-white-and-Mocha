@@ -4,7 +4,7 @@ const cafeteria = require ('../models/Cafeteria.model')
 
 // Shop List
 
-router.get('/tienda', (req, res, next) => {
+router.get('/shops', (req, res, next) => {
   
   cafeteria
     .find()
@@ -12,14 +12,24 @@ router.get('/tienda', (req, res, next) => {
     .catch(err => console.log (err))
 });
 
+// Shop details
+
+router.get('/details/:id/shop', (req, res, next) => {
+  
+    cafeteria
+      .find()
+      .then(cafeteria => res.render ('shop/details_page',{cafeteria}))
+      .catch(err => console.log (err))
+  });
+
 // Add new Shop  - only Admin
 
-router.get('/tienda/nueva', (req, res, next) => {
+router.get('/create-shop', (req, res, next) => {
  res.render('shop/create_form')
  .catch(err => console.log (err))
 });
 
-router.post('/tienda/nueva', (req, res, next) => {
+router.post('/create-shop', (req, res, next) => {
 
   const {name, type, image, location, description, transport, website, rating} = req.body
 
@@ -31,7 +41,7 @@ router.post('/tienda/nueva', (req, res, next) => {
 });
 
 // Edit Shop  - only Admin
-router.get('/tienda/:id/editar', (req, res, next) => {
+router.get('/edit/:id/shop', (req, res, next) => {
 
     const {id} = req.params
 
@@ -42,7 +52,7 @@ router.get('/tienda/:id/editar', (req, res, next) => {
 
 });
 
-router.post('/tienda/:id/editar', (req, res, next) => {
+router.post('/edit/:id/shop', (req, res, next) => {
 
   const {id} = req.params
   const { name, type, image, location, description, transport, website, rating } = req.body
@@ -56,7 +66,7 @@ router.post('/tienda/:id/editar', (req, res, next) => {
 
 
 // Delete cafeteria - only Admin
-router.post('/shop/:id/eliminar', (req, res, next) => {
+router.post('/delete/:id/shop', (req, res, next) => {
   
   const {id}= req.params
 
