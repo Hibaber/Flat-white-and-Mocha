@@ -1,39 +1,54 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "moon", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00b7ff;
 }
 
-h1 {
+h1,h2 {
   color: 15px;
+  font-family: 'Dancing Script', cursive;
 }
 
-img {
-  width: 50px;
+p {
+  font-family: 'Montserrat', sans-serif;
+  color: 15px;
+  
 }
 
-/* ----- INTRO  ----- */
-.headerstyle{
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 20px 0;
-  z-index: 9999;
-  transition: all .3s;
+/* ----- VIEWS  ----- */
 
-}
+
+/* --- Layout --- */
+
 
 nav {
 
   margin-top: -48px;
+  font-family: 'Dancing Script', cursive;
 
 }
 
-.principal-picture {
-  background: black url(public\images\portada.jpg);
-  padding: 0;
+
+.footer-container{
+
+  margin: inherit;
+  padding: 50px;
+  background-color: black;
 }
 
+/* --- Index --- */
+
+.index-container{
+ margin: 300px;
+
+}
+
+/* --- Details --- */
+#myMap{
+  height:300px; 
+  background-color:antiquewhite;
+
+}

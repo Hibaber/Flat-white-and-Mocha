@@ -9,7 +9,7 @@ router.get('/shops', (req, res, next) => {
   cafeteria
     .find()
     .then(cafeteria => res.render ('shop/list_page',{cafeteria}))
-    .catch(err => console.log (err))
+    
 });
 
 // Shop details
@@ -35,7 +35,7 @@ router.post('/create-shop', (req, res, next) => {
 
   cafeteria
     .create ({name, type, image, location, description, transport, website, rating})
-    .then (()=> res.redirect ('/shop/list_page'))
+    .then (()=> res.redirect ('shop/list_page'))
     .catch(err => console.log (err))
 
 });

@@ -21,7 +21,7 @@ router.get('/create-cafeteria', (req, res, next) => {
 
 router.post('/create-cafeteria', (req, res, next) => {
 
-  const {name, type, image, location, description, transport, website, rating} = req.body
+  const {name, type, image, l, description, transport, website, rating} = req.body
 
   cafeteria
     .create ({name, type, image, location, description, transport, website, rating})

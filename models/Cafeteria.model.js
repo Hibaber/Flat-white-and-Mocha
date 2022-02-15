@@ -24,8 +24,9 @@ const cafeteriaSchema = new Schema(
         location: {
             type: {
                 type: String,
+                default: 'Point',
             },
-            coordinates: [Number]
+            coordinates: [Number],
         },
 
         description: {
