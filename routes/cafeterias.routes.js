@@ -15,21 +15,17 @@ router.get('/cafeterias', (req, res, next) => {
 // Add new Cafeteria
 
 router.get('/create-cafeteria', (req, res, next) => {
-  res.render('cafeteria/create_form')
-    .catch(err => console.log(err))
+    res.render('cafeteria/create_form')
+    
 });
 
 router.post('/create-cafeteria', (req, res, next) => {
 
-<<<<<<< HEAD
-  const {name, type, image, l, description, transport, website, rating} = req.body
-=======
-  const { name, type, image, location, description, transport, website, rating } = req.body
->>>>>>> refs/remotes/origin/main
+  const { name, type, image, lat, lng, description, transport, website, rating } = req.body 
 
   cafeteria
-    .create({ name, type, image, location, description, transport, website, rating })
-    .then(() => res.redirect('/cafeteria/list_page'))
+    .create({ name, type, image, location:{coordinates: [lat, lng]}, description, transport, website, rating }) 
+    .then(() => res.render('cafeteria/list_page'))
     .catch(err => console.log(err))
 
 });
@@ -55,7 +51,7 @@ router.post('/edit/:id/cafeteria', (req, res, next) => {
 
   cafeteria
     .findByIdAndUpdate(id, { name, type, image, location, description, transport, website, rating }, { new: true })
-    .then(() => res.redirect('/cafeteria/list_page'))
+    .then(() => res.render('cafeteria/list_page'))
     .catch(err => console.log(err))
 
 });
@@ -68,7 +64,7 @@ router.post('/delete/:id/cafeteria', (req, res, next) => {
 
   cafeteria
     .findByIdAndDelete(id)
-    .then(() => res.redirect('/cafeteria/list_page'))
+    .then(() => res.render('cafeteria/list_page'))
     .then(err => console.log(err))
 });
 

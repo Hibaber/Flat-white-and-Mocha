@@ -9,7 +9,7 @@ a {
 
 h1,h2 {
   color: 15px;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Josefin Slab', serif;
 }
 
 p {
@@ -27,7 +27,7 @@ p {
 nav {
 
   margin-top: -48px;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Josefin Slab', serif;
 
 }
 
@@ -39,23 +39,8 @@ nav {
   background-color: black;
 }
 
-<<<<<<< HEAD
-/* --- Index --- */
-
-.index-container{
- margin: 300px;
-
-}
-
-/* --- Details --- */
-=======
->>>>>>> refs/remotes/origin/main
 #myMap{
   height:300px; 
   background-color:antiquewhite;
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> refs/remotes/origin/main

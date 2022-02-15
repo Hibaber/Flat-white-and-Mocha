@@ -34,7 +34,3 @@ function printMarker() {
     })
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/main

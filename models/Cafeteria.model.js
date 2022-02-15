@@ -17,7 +17,7 @@ const cafeteriaSchema = new Schema(
 
         image: {
             type: String,
-            required: true,
+            
             default: "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG"
         },
 
@@ -48,7 +48,9 @@ const cafeteriaSchema = new Schema(
         rating: {
             type: Number,
             required: true,
-            default: 'introduce rating'
+            default: 'introduce rating' , 
+            min:1,
+            max:5,
         }
 
     },

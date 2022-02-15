@@ -1,102 +1,57 @@
-<<<<<<< HEAD
 <h2>Nueva Cafetería</h2>
-<div class=“row justify-content-center”>
-    <div class=“col-md-6”>
-        <form action=“/create_form” method=“POST”>
-            <div class=“mb-3”>
-                <label for=“nameInput” class=“form-label”>Nombre:</label>
-                <input name=“name” type=“text” class=“form-control” id=“nameInput”>
-            </div>
-            <br>
-             <div class=“mb-3”>
-                <label for=“nameInput” class=“form-label”>Pág. Web:</label>
-                <input name=“name” type=“text” class=“form-control” id=“nameInput”>
-            </div>
-            <br>
-            <div class=“mb-3”>
-                <label for=“types” class=“form-label”>Selecciona el tipo de local:</label>
-                <select name=“type” id=“types” class=“form-select”>
-                    <option value=“” disabled selected>---Select one---</option>
-                    <option value=“coffee shop”>Coffee shop</option>
-                    <option value=“bookstore”>Cafeteria</option>
-                </select>
-            </div>
-            <br>
-            <div class=“mb-3”>
-                <label for=“latInput” class=“form-label”>Latitud</label>
-                <input type=“text” name=“lat” id=“latInput” class=“form-control”>
-            </div>
-            <br>
-            <div class=“mb-3”>
-                <label for=“lngInput” class=“form-label”>Longitud</label>
-                <input type=“text” name=“lng” id=“lngInput” class=“form-control”>
-            </div>
-            <br>
-            <div class=“mb-3”>
-                <label for=“nameInput” class=“form-label”>Descripción:</label>
-                <input name=“name” type=“text” class=“form-control” id=“nameInput”>
-            </div>
-            <br>
-            <div class=“mb-3”>
-                <label for=“nameInput” class=“form-label”>Imagen:</label>
-                <input name=“name” type=“text” class=“form-control” id=“nameInput”>
-            </div>
-            <br>
-            <div class=“mb-3”>
-                <label for=“nameInput” class=“form-label”>Transporte más cercano:</label>
-                <input name=“name” type=“text” class=“form-control” id=“nameInput”>
-            </div>
-            <br>
-            <div class=“mb-3”>
-                <label for=“nameInput” class=“form-label”>Puntuación:</label>
-                <input name=“name” type=“text” class=“form-control” id=“nameInput”>
-            </div>
-            <br><br>
-            <button type=“submit” class=“btn btn-primary”>Añadir cafetería</button>
-=======
 <div class="row justify-content-center">
     <div class="col-md-6">
-        <form action="/create" method="POST">
+        <form action="/create-cafeteria" method="POST">
             <div class="mb-3">
-                <label for="nameInput" class="form-label">Name:</label>
+                <label for="nameInput" class="form-label">Nombre:</label>
                 <input name="name" type="text" class="form-control" id="nameInput">
             </div>
+            <br>
+             <div class="mb-3">
+                <label for="nameInput" class="form-label"> Web:</label>
+                <input name="webSite" type="text" class="form-control" id="nameInput">
+            </div>
+            <br>
             <div class="mb-3">
-                <label for="types" class="form-label">Select type of place:</label>
+                <label for="types" class="form-label">Selecciona el tipo de local:</label>
                 <select name="type" id="types" class="form-select">
-                    <option value="" disabled selected>---Select one---</option>
-                    <option value="coffee shop">Coffee shop</option>
-                    <option value="bookstore">Cafeteria</option>
+                    <option value="">---Select one---</option>
+                    <option value="shop"> shop</option>
+                    <option value="cafeteria">Cafeteria</option>
                 </select>
             </div>
+            <br>
             <div class="mb-3">
-                <label for="latInput" class="form-label">Latitude</label>
+                <label for="latInput" class="form-label">Latitud</label>
                 <input type="text" name="lat" id="latInput" class="form-control">
             </div>
+            <br>
             <div class="mb-3">
-                <label for="lngInput" class="form-label">Longitude</label>
+                <label for="lngInput" class="form-label">Longitud</label>
                 <input type="text" name="lng" id="lngInput" class="form-control">
             </div>
+            <br>
             <div class="mb-3">
-                <label for="nameInput" class="form-label">Description:</label>
-                <input name="name" type="text" class="form-control" id="nameInput">
+                <label for="nameInput" class="form-label">Descripción:</label>
+                <input name="description" type="text" class="form-control" id="nameInput">
             </div>
+            <br>
             <div class="mb-3">
-                <label for="nameInput" class="form-label">Image:</label>
-                <input name="name" type="text" class="form-control" id="nameInput">
+                <label for="nameInput" class="form-label">Imagen:</label>
+                <input name="image" type="text" class="form-control" id="nameInput">
             </div>
-
+            <br>
             <div class="mb-3">
                 <label for="nameInput" class="form-label">Transporte más cercano:</label>
-                <input name="name" type="text" class="form-control" id="nameInput">
+                <input name="transport" type="text" class="form-control" id="nameInput">
             </div>
+            <br>
             <div class="mb-3">
                 <label for="nameInput" class="form-label">Puntuación:</label>
-                <input name="name" type="text" class="form-control" id="nameInput">
+                <input name="rating" type="text" class="form-control" id="nameInput">
             </div>
-
-            <button type="submit" class="btn btn-primary">Submit</button>
->>>>>>> refs/remotes/origin/main
+            <br><br>
+            <button type="submit" class="btn btn-primary">Añadir cafetería</button>
         </form>
     </div>
 </div>
