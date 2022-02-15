@@ -1,17 +1,17 @@
-<p> TIENDA detalles por ID !!!!</p>
+<p>Cafeteria detalles por ID !!!!</p>
 
 
 <figure id="myMap"></figure>
 
+{{!-- { { !--permite ocultar los detalles-- } } --}}
+{{!-- saca la location y sus coordenadas del objeto del modelo --}}
 <div class="d-none">
     <input value="{{location.coordinates.[0]}}">
     <input value="{{location.coordinates.[1]}}">
 </div>
 
-{{!-- consultar base de datos sin recargar --}}
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-<script src="/js/shop&cafeteria-map.js"></script>
+<script src="/js/shop&cafeteria-map.js"> </script>
 <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_l8_hZMx6KlAYM47d8i2BZ4vDVX6Becg&callback=initMap"></script>
