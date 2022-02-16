@@ -37,7 +37,7 @@ router.get('/create-shop', (req, res, next) => {
 
 router.post('/create-shop', fileUploader.single('image'), (req, res, next) => {
 
-  const { name, type, image, lat, lng, description, transport, website, rating } = req.body
+  const { name, type, lat, lng, description, transport, website, rating } = req.body
 
 
   cafeteria

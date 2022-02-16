@@ -2,11 +2,13 @@
 require("dotenv/config");
 require("./db");
 
+
 const express = require("express");
 const hbs = require("hbs");
 const app = express();
 
 require("./config")(app);
+require("./config/session.config")(app)
 
 app.locals.appTitle = `Flat White & Mocha`;
 
