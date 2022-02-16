@@ -1,5 +1,11 @@
 const router = require("express").Router();
 
+
+
+// ********* require fileUploader in order to use it *********
+const fileUploader = require('../config/cloudinary.config');
+
+
 const cafeteria = require('../models/Cafeteria.model')
 
 // Shop List
@@ -29,12 +35,13 @@ router.get('/create-shop', (req, res, next) => {
     
 });
 
-router.post('/create-shop', (req, res, next) => {
+router.post('/create-shop', fileUploader.single('image'), (req, res, next) => {
 
   const { name, type, image, lat, lng, description, transport, website, rating } = req.body
 
+
   cafeteria
-    .create({ name, type, image, location:{coordinates: [lat, lng]}, description, transport, website, rating })
+    .create({ name, type, image: req.file.path, location:{coordinates: [lat, lng]}, description, transport, website, rating })
     .then(() => res.redirect('shop/list_page'))
     .catch(err => console.log(err))
 

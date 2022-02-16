@@ -1,5 +1,5 @@
 
-# Welcome to White Flat & Mocha
+# Welcome to Flat White & Mocha
 
 We are Laura and Hiba, 2 coffee lovers who decided to make their backend module project about tasty specialty coffee shops in Madrid
 ## API Reference

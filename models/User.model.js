@@ -7,7 +7,12 @@ const userSchema = new Schema(
       type: String,
       unique: true,
       required: true,
+    },
 
+    role: {
+      type: String,
+      enum: ['USER', 'ADMIN'],
+      default: 'USER',
     },
 
     email: {
