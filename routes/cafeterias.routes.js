@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-const cafeteria = require('../models/Cafeteria.model')
+const Cafeteria = require('../models/Cafeteria.model')
 
 const fileUploader = require('../config/cloudinary.config');
 
@@ -8,7 +8,7 @@ const fileUploader = require('../config/cloudinary.config');
 
 router.get('/cafeterias', (req, res, next) => {
 
-  cafeteria
+  Cafeteria
     .find()
     .then(cafeteria => res.render('cafeteria/list_page', { cafeteria }))
     .catch(err => console.log(err))
@@ -18,12 +18,20 @@ router.get('/cafeterias', (req, res, next) => {
 
 router.get('/details/:id/cafeteria', (req, res, next) => {
 
-  cafeteria
+  // Promise.all().then()
+
+  // Comment.find({ cafeteria: req.params.id }).then(comments => {
+
+  // })
+
+
+  Cafeteria
     .find()
-    .then(cafeteria => res.render('cafeteria/details_page', { cafeteria }))
+    .then(cafeteria => res.render('cafeteria/details_page', { cafeteria })) // , comments
     .catch(err => console.log(err))
 });
 
+// añadir comentario: vista para formulario para crear 
 
 // Add new Cafeteria
 
@@ -36,8 +44,8 @@ router.post('/create-cafeteria', fileUploader.single('image'), (req, res, next) 
 
   const { name, type, lat, lng, description, transport, website, rating } = req.body
 
-  cafeteria
-    .create({ name, type, image:req.file.path, location: { coordinates: [lat, lng] }, description, transport, website, rating })
+  Cafeteria
+    .create({ name, type, image: req.file.path, location: { coordinates: [lat, lng] }, description, transport, website, rating })
     .then(() => res.render('cafeteria/list_page'))
     .catch(err => console.log(err))
   // hacer console.log (req.file.path)
@@ -49,7 +57,7 @@ router.get('/edit/:id/cafeteria', (req, res, next) => {
 
   const { id } = req.params
 
-  cafeteria
+  Cafeteria
     .findById(id)
     .then(cafeteria => res.render('cafeteria/edit_form', cafeteria))
     .catch(err => console.log(err))
@@ -63,7 +71,7 @@ router.post('/edit/:id/cafeteria', (req, res, next) => {
 
 
 
-  cafeteria
+  Cafeteria
     .findByIdAndUpdate(id, { name, type, image, location, description, transport, website, rating }, { new: true })
     .then(() => res.render('cafeteria/list_page'))
     .catch(err => console.log(err))
@@ -76,7 +84,7 @@ router.post('/delete/:id/cafeteria', (req, res, next) => {
 
   const { id } = req.params
 
-  cafeteria
+  Cafeteria
     .findByIdAndDelete(id)
     .then(() => res.render('cafeteria/list_page'))
     .then(err => console.log(err))

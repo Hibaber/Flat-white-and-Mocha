@@ -1,35 +1,34 @@
 module.exports = app => {
-  
-    // Base routes
-    const indexRouter = require("./index.routes");
-    app.use("/", indexRouter);
-    
-    // Auth routes
-    const authRouter = require("./auth.routes");
-    app.use("/", authRouter); 
 
-    // // Admin routes
-    // const adminRouter = require("./admin.routes");
-    // app.use("/", adminRouter); 
+  // Base routes
+  const indexRouter = require("./index.routes");
+  app.use("/", indexRouter);
 
-     // User routes
-     const userRouter = require("./user.routes");
-     app.use("/", userRouter); 
+  // Auth routes
+  const authRouter = require("./auth.routes");
+  app.use("/", authRouter);
 
-    // Cafeterias routes
-    const cafeteriasRouter = require ('./cafeterias.routes');
-    app.use("/", cafeteriasRouter); 
+  // // Admin routes
+  const adminRouter = require("./admin.routes");
+  app.use("/", adminRouter);
 
-    // Shop routes
-    const shopRouter = require ('./shop.routes');
-    app.use("/", shopRouter); 
+  // User routes
+  const userRouter = require("./user.routes");
+  app.use("/", userRouter);
 
-    // About Coffee routes
-    const aboutCoffeeRouter = require ('./about-coffee.routes');
-    app.use("/", aboutCoffeeRouter);
+  // Cafeterias routes
+  const cafeteriasRouter = require('./cafeterias.routes');
+  app.use("/", cafeteriasRouter);
 
-    // Benefits routes
-    const benefitsRouter = require ('./benefits.routes');
-    app.use("/", benefitsRouter); 
-  }
-  
+  // Shop routes
+  const shopRouter = require('./shop.routes');
+  app.use("/", shopRouter);
+
+  // About Coffee routes
+  const aboutCoffeeRouter = require('./about-coffee.routes');
+  app.use("/", aboutCoffeeRouter);
+
+  // Benefits routes
+  const benefitsRouter = require('./benefits.routes');
+  app.use("/", benefitsRouter);
+}

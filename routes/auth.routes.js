@@ -30,19 +30,25 @@ router.post('/login', (req, res, next) => {
 
   const { email, userPwd } = req.body
 
+
   User
     .findOne({ email })
     .then(user => {
       if (!user) {
         res.render('auth/login_form', { errorMessage: 'Email no registrado en la Base de Datos' })
         return
-      } else if (bcryptjs.compareSync(userPwd, user.password) === false) {
+      }
+      if (bcryptjs.compareSync(userPwd, user.password) === false) {
         res.render('auth/login_form', { errorMessage: 'La contraseña es incorrecta' })
         return
-      } else {
-        req.session.currentUser = user
-        res.redirect('user/profile_page')
       }
+
+      console.log(user);
+      req.session.currentUser = user
+      if (user.role === 'USER')
+        res.redirect('/user-profile')
+      else
+        res.redirect('/admin-profile')
     })
     .catch(error => next(error))
 })
@@ -52,5 +58,7 @@ router.post('/login', (req, res, next) => {
 router.post('/logout', (req, res, next) => {
   req.session.destroy(() => res.redirect('/login'))
 })
+
+
 
 module.exports = router
