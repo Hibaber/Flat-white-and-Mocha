@@ -7,7 +7,15 @@ module.exports = app => {
     // Auth routes
     const authRouter = require("./auth.routes");
     app.use("/", authRouter); 
-  
+
+    // // Admin routes
+    // const adminRouter = require("./admin.routes");
+    // app.use("/", adminRouter); 
+
+    //  // User routes
+    //  const userRouter = require("./user.routes");
+    //  app.use("/", userRouter); 
+
     // Cafeterias routes
     const cafeteriasRouter = require ('./cafeterias.routes');
     app.use("/", cafeteriasRouter); 

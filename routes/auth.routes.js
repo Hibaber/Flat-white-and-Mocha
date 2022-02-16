@@ -5,8 +5,10 @@ const saltRounds = 10
 
 // Signup
 
-router.get('/signup', (req, res, next) => res.render('auth/signup_form'))
-router.post('/signup', (req, res, next) => {
+router.get('/singup', (req, res, next) => res.render('auth/signup_form'))
+
+
+router.post('/singup', (req, res, next) => {
 
   const { userPwd } = req.body
 
@@ -22,6 +24,8 @@ router.post('/signup', (req, res, next) => {
 
 // Login
 router.get('/login', (req, res, next) => res.render('auth/login_form'))
+
+
 router.post('/login', (req, res, next) => {
 
   const { email, userPwd } = req.body

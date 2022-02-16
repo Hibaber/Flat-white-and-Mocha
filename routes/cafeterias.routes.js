@@ -26,7 +26,7 @@ router.post('/create-cafeteria', fileUploader.single('image'), (req, res, next) 
   const { name, type, lat, lng, description, transport, website, rating } = req.body
 
   cafeteria
-    .create({ name, type, image: req.file.path, location: { coordinates: [lat, lng] }, description, transport, website, rating })
+    .create({ name, type, image:req.file.path, location: { coordinates: [lat, lng] }, description, transport, website, rating })
     .then(() => res.render('cafeteria/list_page'))
     .catch(err => console.log(err))
   // hacer console.log (req.file.path)
