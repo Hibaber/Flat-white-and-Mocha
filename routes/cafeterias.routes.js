@@ -2,6 +2,8 @@ const router = require("express").Router();
 
 const cafeteria = require('../models/Cafeteria.model')
 
+const fileUploader = require('../config/cloudinary.config');
+
 // Cafeteria List
 
 router.get('/cafeterias', (req, res, next) => {
@@ -15,18 +17,19 @@ router.get('/cafeterias', (req, res, next) => {
 // Add new Cafeteria
 
 router.get('/create-cafeteria', (req, res, next) => {
-    res.render('cafeteria/create_form')
-    
+  res.render('cafeteria/create_form')
+
 });
 
-router.post('/create-cafeteria', (req, res, next) => {
+router.post('/create-cafeteria', fileUploader.single('image'), (req, res, next) => {
 
-  const { name, type, image, lat, lng, description, transport, website, rating } = req.body 
+  const { name, type, lat, lng, description, transport, website, rating } = req.body
 
   cafeteria
-    .create({ name, type, image, location:{coordinates: [lat, lng]}, description, transport, website, rating }) 
+    .create({ name, type, image: req.file.path, location: { coordinates: [lat, lng] }, description, transport, website, rating })
     .then(() => res.render('cafeteria/list_page'))
     .catch(err => console.log(err))
+  // hacer console.log (req.file.path)
 
 });
 

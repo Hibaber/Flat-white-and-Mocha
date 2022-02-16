@@ -1,13 +1,14 @@
 <h2>Nueva Cafetería</h2>
 <div class="row justify-content-center">
     <div class="col-md-6">
-        <form action="/create-cafeteria" method="POST">
+        <form action="/create-cafeteria" method="POST" enctype="multipart/form-data">
+
             <div class="mb-3">
                 <label for="nameInput" class="form-label">Nombre:</label>
                 <input name="name" type="text" class="form-control" id="nameInput">
             </div>
             <br>
-             <div class="mb-3">
+            <div class="mb-3">
                 <label for="nameInput" class="form-label"> Web:</label>
                 <input name="webSite" type="text" class="form-control" id="nameInput">
             </div>
@@ -38,7 +39,7 @@
             <br>
             <div class="mb-3">
                 <label for="nameInput" class="form-label">Imagen:</label>
-                <input name="image" type="text" class="form-control" id="nameInput">
+                <input name="image" type="file" class="form-control" id="nameInput">
             </div>
             <br>
             <div class="mb-3">
