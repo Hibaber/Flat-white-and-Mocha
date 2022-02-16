@@ -1,6 +1,15 @@
-<h1>{{title}} 🚀</h1>
-<p>Welcome Ironhacker!</p>
 <p>cafeterias!!!!</p>
 
+{{#each cafeteria}}
 
-<a href="/create-cafeteria">Crear cafeteria nueva </a> 
+<div class="card" style="width: 18rem;">
+    <img src="{{image}}" class="card-img-top" alt="Cafeteria">
+    <div class="card-body">
+        <h5 class="card-title">{{name}}</h5>
+        <a href="/details/:id/cafeteria" class="btn btn-primary">Ver cafetería</a>
+    </div>
+</div>
+
+{{/each}}
+
+<a href="/create-cafeteria">Crear cafeteria nueva </a>

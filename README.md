@@ -23,12 +23,14 @@ Flat White & Mocha endpoints
 |   `GET`     | `/create-cafeteria` | Renderiza la página de creación de cafeterías        |    admin  |
 |   `POST`    | `/create-cafeteria` | Gestiona el formulario de creación de las cafeterías |   admin    |
 |   `GET`     | `/cafeterias` | Renderiza la página de la lista de cafeterías              |   admin    |
-|   `GET`     | `/edit/:id/cafeteria` | Renderia los detalles de la cafetería              |   admin    |
-|   `POST`    | `/edit/:id/cafeteria` | Gestiona el formulario de creación de cafetería    |   admin    |
+|   `GET`     | `/details/:id/cafeteria` | Renderia los detalles de la cafetería              |   admin    |
+|   `GET`     | `/edit/:id/cafeteria` | Renderia los detalles de la cafetería                   |   admin    |
+|   `POST`    | `/edit/:id/cafeteria` | Gestiona el formulario de creación de cafetería         |   admin    |
 |   `DELETE`  | `/delete/:id/cafeteria`| Gestiona el formulario de eliminación de cafetería|   admin    |
 |   `GET`     | `/create-shop` | Renderiza la página de las cafeterías                     | admin     |
 |   `POST`    | `/create-shop` | Gestiona el formulario de creación de las cafeterías      |   admin    |
 |   `GET`     | `/shops` | Renderiza la página de la lista de tiendas de café              |       |
+|   `GET`     | `/details/:id/shop` | Renderia los detalles de la tienda                   |       |
 |   `GET`     | `/edit/:id/shop` | Renderiza el formulario de creación de tiendas de café  |   admin    |
 |   `POST`    | `/edit/:id/shop` | Gestiona el formulario de creación de tiendas de café   |   admin    |
 |   `DELETE`  | `/delete/:id/shop` | Gestiona el formulario de eliminación de tiendas de café  |   admin    |

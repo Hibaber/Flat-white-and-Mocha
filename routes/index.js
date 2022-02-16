@@ -12,9 +12,9 @@ module.exports = app => {
     // const adminRouter = require("./admin.routes");
     // app.use("/", adminRouter); 
 
-    //  // User routes
-    //  const userRouter = require("./user.routes");
-    //  app.use("/", userRouter); 
+     // User routes
+     const userRouter = require("./user.routes");
+     app.use("/", userRouter); 
 
     // Cafeterias routes
     const cafeteriasRouter = require ('./cafeterias.routes');

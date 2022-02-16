@@ -14,6 +14,17 @@ router.get('/cafeterias', (req, res, next) => {
     .catch(err => console.log(err))
 });
 
+//Details Cafeteria
+
+router.get('/details/:id/cafeteria', (req, res, next) => {
+
+  cafeteria
+    .find()
+    .then(cafeteria => res.render('cafeteria/details_page', { cafeteria }))
+    .catch(err => console.log(err))
+});
+
+
 // Add new Cafeteria
 
 router.get('/create-cafeteria', (req, res, next) => {

@@ -1,25 +1,18 @@
 <div class="container">
 
-    <div class="row justify-content-center">
+    {{#each shop}}
 
-        <h1>Tiendas de Café</h1>
-        <hr>
-        <ul>
-            {{#each cafeteria}}  
-                    <div class="card" style="width: 18rem;">
-                    <img src="{{image}}" class="card-img-top" alt="Imagen de perfil">
-                    <div class="card-body">
-                        <h5 class="card-title">{{username}}</h5>
-                        <a href="/{{id}}" class="btn btn-primary">Perfil</a>
-                    </div>
-                    </div>
-            {{/each}}
-          
-        <ul>
-    </div> 
-</div>
+    <div class="card" style="width: 18rem;">
+        <img src="{{image}}" class="card-img-top" alt="tienda">
+        <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <a href="/details/:id/shop" class="btn btn-primary">Ver tienda</a>
+        </div>
+    </div>
+
+    {{/each}}
 
 
 
 
-<a href="/create-shop">Crear tienda nueva </a> 
+    <a href="/create-shop">Crear tienda nueva </a>
