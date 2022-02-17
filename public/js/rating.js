@@ -8,34 +8,27 @@ console.log(rating)
     switch (rating) {
 
         case "1":
-            elem.innerHTML = `
-            ☕
-        `
+            elem.innerHTML = `☕`
+         
             break
 
         case "2":
-            elem.innerHTML = `
-            ☕☕
-        `
+            elem.innerHTML = `☕☕`
             break
 
         case "3":
-            elem.innerHTML = `
-            ☕☕☕
-            
-        `
+            elem.innerHTML = `☕☕☕`       
+        
             break
 
         case "4":
-            elem.innerHTML = `
-            ☕☕☕☕
-        `
+            elem.innerHTML = `☕☕☕☕`
+        
             break
 
         case "5":
-            elem.innerHTML = `
-            ☕☕☕☕☕
-        `
+            elem.innerHTML = `☕☕☕☕☕`
+        
             break
 
     }
