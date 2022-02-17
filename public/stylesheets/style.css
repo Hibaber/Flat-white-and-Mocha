@@ -1,7 +1,4 @@
-*{
-  margin: 0;
-  padding: 0;
-}
+
 
 img{
   width: 100%;
@@ -23,18 +20,39 @@ h1,h2 {
 
 p {
   font-family: 'Montserrat', sans-serif;
-  color: 15px;
+  font-size: 15px;
   
+}
+
+.logo{
+
+  width: 120px;
+ 
+
 }
 
 .container{
   padding: 20px;
   padding-bottom:20px;
+  margin-bottom:40px;
 }
 
-/* .btn-logout { 
-  border:none;
-} */
+
+.cafeteria{
+  text-align:left;
+  position:relative;
+}
+
+.coffee-shop{
+  border-radius:30px;
+  box-shadow: 0 3px 8px 4px rgb(123, 98, 88, 0.5);
+}
+
+.cafeteria h3, .cafeteria p{
+
+  font-weight:600;
+}
+
 
 .btn{
   background-color: #7b6258;
@@ -74,16 +92,21 @@ p {
 
 nav {
   font-family: 'Josefin Slab', serif;
+  margin-bottom:40px;
+  font-size:20px;
+  display:flex;
+  justify-content:flex-end;
 }
 
 .card{
   margin:10px;
   text-align:center;
 }
-
+.details{
+  margin-left:50px;
+  margin-bottom:50px;
+}
 footer{
- 
-
   position: fixed;
   bottom: 0;
   background-color: darkgray;
@@ -92,10 +115,20 @@ footer{
 }
 
 #myMap{
-  height:300px; 
-  width: 500px;
+  height:500px; 
+  /* width: 500px; */
   background-color:antiquewhite;
 
+}
+.buttons{
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.buttons button{
+   margin:20px;
 }
 
 /* --- Fav --- */

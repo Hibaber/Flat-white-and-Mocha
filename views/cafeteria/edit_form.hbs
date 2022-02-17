@@ -1,4 +1,4 @@
-<h1>Editar cafeteria: {{name}}</h1>
+<h1 class="details">Editar: {{name}}</h1>
 
 <form action="/edit/{{_id}}/cafeteria" method="POST">
 
@@ -6,6 +6,11 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <form action="/details/{{_id}}/cafeteria" method="POST" enctype="multipart/form-data">
+
+                <div class="mb-3">
+                    <label for="nameInput" class="form-label">Nombre:</label>
+                    <input name="name" type="text" class="form-control" id="nameInput">
+                </div>
 
                 <div class="mb-3">
                     <label for="nameInput" class="form-label">Descripción:</label>
