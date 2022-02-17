@@ -8,7 +8,7 @@ img{
 }
 
 body {
-  padding: 50px;
+  
   font: 14px "moon", Helvetica, Arial, sans-serif;
 }
 
@@ -27,6 +27,24 @@ p {
   
 }
 
+.container{
+  padding: 20px;
+  padding-bottom:20px;
+}
+
+/* .btn-logout { 
+  border:none;
+} */
+
+.btn{
+  background-color: #7b6258;
+  border:none;
+  color:white;
+}
+.logout{
+
+  background:transparent;
+}
 /* ----- VIEWS  ----- */
 
 /* --- Index --- */
@@ -54,25 +72,23 @@ p {
 
 /* --- Layout --- */
 
-
 nav {
-
-  margin-top: -48px;
   font-family: 'Josefin Slab', serif;
-
 }
 
+.card{
+  margin:10px;
+  text-align:center;
+}
 
-.footer-container{
+footer{
+ 
 
-  margin: inherit;
-  padding: 50px;
   position: fixed;
   bottom: 0;
   background-color: darkgray;
   width: 100%;
-  padding: 10px;
-}
+  padding: 5px 0;
 }
 
 #myMap{
@@ -97,6 +113,9 @@ nav {
 
 svg{
   width: 49px;
-  margin-top: -94px;
-  margin-left: 118px;
+  position: absolute;
+  right:0;
+  bottom:0;
+
+
 }

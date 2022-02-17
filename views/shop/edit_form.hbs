@@ -1,0 +1,36 @@
+<h1>Editar tienda: {{name}}</h1>
+
+<form action="/edit/{{_id}}/shop" method="POST">
+
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form action="/details/{{_id}}/shop" method="POST" enctype="multipart/form-data">
+
+                <div class="mb-3">
+                    <label for="nameInput" class="form-label">Descripción:</label>
+                    <input name="description" type="text" class="form-control" id="nameInput">
+                </div>
+                <br>
+
+                <div class="mb-3">
+                    <label for="latInput" class="form-label">Latitud</label>
+                    <input type="text" name="lat" id="latInput" class="form-control">
+                </div>
+                <br>
+                <div class="mb-3">
+                    <label for="lngInput" class="form-label">Longitud</label>
+                    <input type="text" name="lng" id="lngInput" class="form-control">
+                </div>
+
+                <br>
+                <div class="mb-3">
+                    <label for="nameInput" class="form-label">Transporte más cercano: </label>
+                    <input name="transport" type="text" class="form-control" id="nameInput">
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Añadir cafetería</button>
+                <br>
+            </form>
+        </div>
+    </div>

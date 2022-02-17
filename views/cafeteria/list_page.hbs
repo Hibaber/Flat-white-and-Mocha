@@ -1,37 +1,41 @@
 <div id="gallery" class="container">
-
-
-  <p>cafeterias!!!!</p>
   <ion-icon name="cafe-filled"></ion-icon>
 
-  {{#each cafeteria}}
 
-  <div class="card" style="width: 18rem;">
-    <img src="{{image}}" class="card-img-top" alt="Cafeteria">
-    <div class="card-body">
-      <h5 class="card-title">{{name}}</h5>
-      <div class="rating" data-rating={{rating}}></div>
-      <div id="main-content">
-        <div>
-          <label for="checkbox">
-            <svg id="heart-svg" viewBox="467 392 58 57" xmlns="http://www.w3.org/2000/svg">
-              <g id="Group" fill="none" fill-rule="evenodd" transform="translate(467 392)">
-                <path class="heart"
-                  d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z"
-                  id="heart" fill="#AAB8C2" />
-
-              </g>
-            </svg>
-          </label>
+  <div class="container">
+    <div class="row">
+      {{#each cafeteria}}
+      <div class="col-md-3">
+        <div class="card">
+          <img src="{{image}}" class="card-img-top" alt="Cafeteria">
+          <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <div class="rating" data-rating={{rating}}></div>
+            <div id="main-content">
+              <div>
+                <label for="checkbox">
+                  <svg id="heart-svg" viewBox="467 392 58 57" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Group" fill="none" fill-rule="evenodd" transform="translate(467 392)">
+                      <path class="heart"
+                        d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z"
+                        id="heart" fill="#AAB8C2" />
+                    </g>
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <a href="/details/{{_id}}/cafeteria" class="btn">Ver cafetería</a>
+          </div>
         </div>
       </div>
-      <a href="/details/{{_id}}/cafeteria" class="btn btn-primary">Ver cafetería</a>
+      {{/each}}
     </div>
   </div>
 
-  {{/each}}
 
-  <a href="/create-cafeteria">Crear cafeteria nueva </a>
+  <div class="buttons">
+    <a href="/create-cafeteria" class="btn btn-primary">Crear cafeteria</a>
+  </div>
 
   <script src="/js/rating.js"></script>
 
