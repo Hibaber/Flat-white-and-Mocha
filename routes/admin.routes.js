@@ -81,7 +81,7 @@ router.post('/create-shop', fileUploader.single('image'), isLoggedIn, checkRole(
 
   Cafeteria
     .create({ name, type, image: req.file.path, location: { coordinates: [lat, lng] }, description, transport, website, rating })
-    .then(() => res.redirect('shop/list_page'))
+    .then(() => res.redirect('/shops'))
     .catch(err => console.log(err))
 
 });

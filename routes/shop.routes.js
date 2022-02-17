@@ -1,23 +1,21 @@
 const router = require("express").Router();
 const fileUploader = require('../config/cloudinary.config');
-const cafeteria = require('../models/Cafeteria.model')
+const Cafeteria = require('../models/Cafeteria.model')
 
 // Shop List
-
 router.get('/shops', (req, res, next) => {
 
-  cafeteria
-    .find()
-    .then(cafeteria => res.render('shop/list_page', { cafeteria }))
+  Cafeteria
+    .find({ type: shop })
+    .then(shop => res.render('shop/list_page', { shop }))
 
 });
 
 // Shop details
-
 router.get('/details/:id/shop', (req, res, next) => {
 
-  cafeteria
-    .find()
+  Cafeteria
+    .find({ type: shop })
     .then(cafeteria => res.render('shop/details_page', { cafeteria }))
     .catch(err => console.log(err))
 });

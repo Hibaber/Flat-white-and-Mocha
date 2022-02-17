@@ -33,10 +33,11 @@ const userSchema = new Schema(
       type: String,
     },
 
-    favorites: [{
-      type: Schema.Types.ObjectId,
+    favorites: {
+      type: [String],
+      default: [],
       ref: "Cafeteria"
-    }]
+    }
 
   },
 
