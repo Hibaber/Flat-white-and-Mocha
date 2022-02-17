@@ -1,10 +1,21 @@
-<p>Cafeteria detalles por ID !!!!</p>
+<img src="{{image}}" alt="imagen">
+<h3> Nombre: {{name}}</h3>
+<p> Tipo de negocio: {{type}}</p>
+<p> Web / Red social:<a href="http://{{website}}">{{website}}</a></p>
+<p>Sobre el establecimiento:{{description}}</p>
+<p> Puntuación: {{rating}}</p>
+<p>Transporte más cercano:{{transport}}</p>
 
 
 <figure id="myMap"></figure>
 
-{{!-- { { !--permite ocultar los detalles-- } } --}}
-{{!-- saca la location y sus coordenadas del objeto del modelo --}}
+<div class="buttons">
+    <a href="/edit/{{_id}}/cafeteria" class="btn btn-primary">Editar</a>
+    <form action="/delete/{{_id}}/cafeteria" method="POST">
+        <button type="submit" class="btn btn-primary">Borrar</button>
+    </form>
+</div>
+
 <div class="d-none">
     <input value="{{location.coordinates.[0]}}">
     <input value="{{location.coordinates.[1]}}">
