@@ -1,8 +1,53 @@
 <div class="container">
-<h1>Bienvenid@ {{user.username}} </h1>
-</h1>
+
+    <div class="container emp-profile">
+        <form method="post">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-img">
+                        <img src="https://www.wikihow.com/images_en/thumb/7/7a/Make-a-Mocha-Coffee-Drink-Step-16.jpg/v4-460px-Make-a-Mocha-Coffee-Drink-Step-16.jpg.webp"
+                            alt="" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="profile-head">
+                        <h5>
+                            lala
+                        </h5>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Email</label>
+                    </div>
+                    <div class="col-md-6">
+                        <p>kshitighelani@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="col-8 des-per">
+            <h4> Cafeterias favoritas </h4>
+            <div class="row">
+                {{#each cafeteria}}
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="{{image}}" class="card-img-top" alt="Cafeteria">
+                        <div class="card-body">
+                            <h5 class="card-title">{{name}}</h5>
+                            <div class="rating" data-rating={{rating}}></div>
+                            <div id="main-content">
+                                <div>
+                                    <div class="buttons">
+                                        <form action="{{id}}/cafeteria" method="POST"> </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="/details/{{_id}}/cafeteria" class="btn">Ver cafetería</a>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+
+            </div>
+        </div>
+    </div>
 </div>
-
-
-
-
