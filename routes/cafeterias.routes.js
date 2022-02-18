@@ -3,6 +3,7 @@ const router = require("express").Router();
 const Cafeteria = require('../models/Cafeteria.model')
 
 const fileUploader = require('../config/cloudinary.config');
+const User = require("../models/User.model");
 
 // Cafeteria List
 
@@ -27,7 +28,24 @@ router.get('/details/:id/cafeteria', (req, res, next) => {
     .catch(err => console.log(err))
 });
 
-// Add new Cafeteria
+
+//favoritos usuario 
+
+router.post ('/:id/cafeteria', (req, res, next) => {
+
+  const { id } = req.params
+  
+  User
+    .findByIdAndUpdate(req.session.currentUser._id, { $push: { "favorites": id }}, {new:true})
+    .then ((id1)=> console.log (id1))
+    .catch (err=> console.log (err))
+ 
+});
+
+
+
+
+// Add new Cafeter
 
 // router.get('/create-cafeteria', (req, res, next) => {
 //   res.render('cafeteria/create_form')

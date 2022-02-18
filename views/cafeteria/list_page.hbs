@@ -13,7 +13,14 @@
             <div class="rating" data-rating={{rating}}></div>
             <div id="main-content">
               <div>
-                <label for="checkbox">
+                <div class="buttons">
+                  <form action="{{id}}/cafeteria" method="POST">
+                  <button value=" "type="submit" class="btn btn-primary">FAV </button>
+                  </form>
+                </div>
+
+
+                {{!-- <label for="checkbox">
                   <svg id="heart-svg" viewBox="467 392 58 57" xmlns="http://www.w3.org/2000/svg">
                     <g id="Group" fill="none" fill-rule="evenodd" transform="translate(467 392)">
                       <path class="heart"
@@ -21,23 +28,22 @@
                         id="heart" fill="#AAB8C2" />
                     </g>
                   </svg>
-                </label>
+                </label> --}}
               </div>
             </div>
             <a href="/details/{{_id}}/cafeteria" class="btn">Ver cafetería</a>
           </div>
         </div>
+
       </div>
       {{/each}}
     </div>
+
+
+    <div class="buttons">
+      <a href="/create-cafeteria" class="btn btn-primary">Crear cafeteria</a>
+    </div>
+
+    <script src="/js/rating.js"></script>
+
   </div>
-
-
-  <div class="buttons">
-    <a href="/create-cafeteria" class="btn btn-primary">Crear cafeteria</a>
-  </div>
-
-  <script src="/js/rating.js"></script>
-
-
-</div>

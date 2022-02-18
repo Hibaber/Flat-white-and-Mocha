@@ -64,6 +64,7 @@ p {
 }
 /* ----- VIEWS  ----- */
 
+<<<<<<< HEAD
 /* --- Index --- */
 
 #carousel-item {
@@ -86,8 +87,11 @@ p {
 }
 
 
+=======
+>>>>>>> origin/main
 /* --- Layout --- */
 
+/* --- Navbar --- */
 nav {
   font-family: 'Josefin Slab', serif;
   margin-bottom:40px;
@@ -101,6 +105,7 @@ nav {
   text-align:center;
 }
 
+<<<<<<< HEAD
 .details{
   margin-left:50px;
   margin-bottom:50px;
@@ -113,12 +118,36 @@ ul>li {
   color:white;
 }
 footer{
+=======
+footer{
+ 
+>>>>>>> origin/main
   position: fixed;
   bottom: 0;
   background-color: #7b6258;
   width: 100%;
   padding: 5px 0;
   text-align:center;
+}
+
+
+/* --- Index --- */
+
+.indexcontainer img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  object-position: top;
+}
+
+
+/* --- List  --- */
+
+#gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
 }
 
 #myMap{
@@ -162,3 +191,14 @@ svg{
 
 
 }
+
+/* --- Profile --- */
+
+.profile-img img{
+  width: 70%;
+  height: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
