@@ -1,6 +1,9 @@
 <div id="gallery" class="container">
   <ion-icon name="cafe-filled"></ion-icon>
 
+  <div class="buttons">
+    <a href="/create-cafeteria" class="btn btn-primary">Crear cafeteria</a>
+  </div>
 
   <div class="container">
     <div class="row">
@@ -12,47 +15,37 @@
             <h5 class="card-title">{{name}}</h5>
             <div class="rating" data-rating={{rating}}></div>
             <div id="main-content">
-              <div>
-                <div class="buttons">
-                  <form action="{{id}}/cafeteria" method="POST">
-                  <button value=" "type="submit" class="btn btn-primary"> <svg id="heart-svg" viewBox="467 392 58 57" xmlns="http://www.w3.org/2000/svg">
-                    <g id="Group" fill="none" fill-rule="evenodd" transform="translate(467 392)">
-                      <path class="heart"
-                        d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z"
-                        id="heart" fill="#AAB8C2" />
-                    </g>
-                  </svg></button>
-                    <button value="" class="heart" type="submit">
-                      <svg id="heart-svg" viewBox="467 392 58 57" xmlns="http://www.w3.org/2000/svg">
-                        <g id="Group" fill="none" fill-rule="evenodd" transform="translate(467 392)">
-                          <path class="heart"
-                            d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z"
-                            id="heart" fill="#AAB8C2" />
-                        </g>
-                      </svg>
-                    </button>
-                  </form>
-                </div>
-
-
-                <label for="checkbox">
-
-                </label>
+              <div class="buttons">
+                <form action="{{id}}/cafeteria" method="POST">
+                  <button value=" " type="submit" class="heart">
+                    <svg id="heart-svg" viewBox="467 392 58 57" xmlns="http://www.w3.org/2000/svg">
+                      <g id="Group" fill="none" fill-rule="evenodd" transform="translate(467 392)">
+                        <path class="heart"
+                          d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z"
+                          id="heart" fill="#AAB8C2" />
+                      </g>
+                    </svg>
+                  </button>
+                  <button value="" class="heart" type="submit">
+                    <svg id="heart-svg" viewBox="467 392 58 57" xmlns="http://www.w3.org/2000/svg">
+                      <g id="Group" fill="none" fill-rule="evenodd" transform="translate(467 392)">
+                        <path class="heart"
+                          d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z"
+                          id="heart" fill="#AAB8C2" />
+                      </g>
+                    </svg>
+                  </button>
+                </form>
               </div>
             </div>
-            <a href="/details/{{_id}}/cafeteria" class="btn">Ver cafetería</a>
           </div>
+          <a href="/details/{{_id}}/cafeteria" class="btn">Ver cafetería</a>
         </div>
-
       </div>
       {{/each}}
     </div>
 
 
-    <div class="buttons">
-      <a href="/create-cafeteria" class="btn btn-primary">Crear cafeteria</a>
-    </div>
-
     <script src="/js/rating.js"></script>
-
   </div>
+</div>

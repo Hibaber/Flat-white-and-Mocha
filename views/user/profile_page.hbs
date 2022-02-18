@@ -1,19 +1,12 @@
 <div class="container">
+    <div class="row justify-content-center align-items-start">
+        <div class="col-4">
+            <img class="profile" src="/images/User.png" alt="">
+        </div>
 
-    <div class="container emp-profile">
-        <form method="post">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="profile-img">
-                        {{!-- <img src="../../images/User.png" alt="foto-perfil" /> --}}
-                    </div>
-                </div>
-
-            </div>
-        </form>
-        <div class="col-8 des-per fav">
-            <h4> Cafeterias favoritas </h4>
-            <div class="row">
+        <div class="col-8">
+            <h4 class="text-center"> Mis cafeterias favoritas: </h4>
+            <div class="row justify-content-center">
                 {{#each cafeteria}}
                 <div class="col-md-3">
                     <div class="card">
@@ -30,12 +23,12 @@
                             </div>
                             <a href="/details/{{_id}}/cafeteria" class="btn">Ver cafetería</a>
                             <a href='/perfil/{{_id}}/borrar' class="btn btn-danger">Quitar cafetería de mis
-                                favoritos </a>
+                                favoritos
+                            </a>
                         </div>
                     </div>
                 </div>
                 {{/each}}
-
             </div>
         </div>
     </div>

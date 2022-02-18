@@ -51,7 +51,7 @@ router.post("/edit/:id/cafeteria", isLoggedIn, checkRole("ADMIN"), (req, res, ne
 
   Cafeteria
     .findByIdAndUpdate(id, { name, type, description, transport, website, rating })
-    .then(() => res.redirect("/cafeteria/list_page"))
+    .then(() => res.redirect("/cafeterias"))
     .catch((err) => console.log(err));
 });
 
@@ -103,7 +103,7 @@ router.post("/edit/:id/shop", isLoggedIn, checkRole("ADMIN"), fileUploader.singl
 
   Cafeteria
     .findByIdAndUpdate(id, { name, type, image: req.file.path, location: { coordinates: [lat, lng] }, description, transport, website, rating })
-    .then(() => res.redirect("shop/list_page"))
+    .then(() => res.redirect("/cafeterias"))
     .catch((err) => console.log(err));
 });
 
