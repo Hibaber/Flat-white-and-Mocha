@@ -49,7 +49,6 @@ p {
 }
 
 .cafeteria h3, .cafeteria p{
-
   font-weight:600;
 }
 
@@ -87,7 +86,6 @@ p {
 }
 
 
-
 /* --- Layout --- */
 
 nav {
@@ -102,16 +100,25 @@ nav {
   margin:10px;
   text-align:center;
 }
+
 .details{
   margin-left:50px;
   margin-bottom:50px;
 }
+
+.navbar{
+  background-color: #7b6258;
+}
+ul>li {
+  color:white;
+}
 footer{
   position: fixed;
   bottom: 0;
-  background-color: darkgray;
+  background-color: #7b6258;
   width: 100%;
   padding: 5px 0;
+  text-align:center;
 }
 
 #myMap{
@@ -126,11 +133,14 @@ footer{
   align-items: center;
 }
 
-
 .buttons button{
    margin:20px;
 }
 
+.popino{
+
+  margin-bottom:5rem;
+}
 /* --- Fav --- */
 
 
