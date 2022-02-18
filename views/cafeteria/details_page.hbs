@@ -1,19 +1,32 @@
-<img src="{{image}}" alt="imagen">
-<h3> Nombre: {{name}}</h3>
-<p> Tipo de negocio: {{type}}</p>
-<p> Web / Red social:<a href="http://{{website}}">{{website}}</a></p>
-<p>Sobre el establecimiento:{{description}}</p>
-<p> Puntuación: {{rating}}</p>
-<p>Transporte más cercano:{{transport}}</p>
+<ion-icon name="cafe-filled"></ion-icon>
 
+<div class="container cafeteria">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-5">
+            <img src="{{image}}" alt="imagen" class="coffee-shop">
+        </div>
+        <div class="col-5">
+            <h3> Nombre: {{name}}</h3>
+            <p> Tipo de negocio: {{type}}</p>
+            <p> Web / Red social:<a href="http://{{website}}">{{website}}</a></p>
+            <p>Sobre el establecimiento:{{description}}</p>
+            <p> Puntuación:</p>
 
-<figure id="myMap"></figure>
-
-<div class="buttons">
-    <a href="/edit/{{_id}}/cafeteria" class="btn btn-primary">Editar</a>
-    <form action="/delete/{{_id}}/cafeteria" method="POST">
-        <button type="submit" class="btn btn-primary">Borrar</button>
-    </form>
+            <p class="rating" data-rating={{rating}}> Puntuación:</p>
+            <p>Transporte más cercano:{{transport}}</p>
+            <div class="buttons">
+                <a href="/edit/{{_id}}/cafeteria" class="btn ">Editar</a>
+                <form action="/delete/{{_id}}/cafeteria" method="POST">
+                    <button type="submit" class="btn ml-5">Borrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center mt-5">
+        <div class="col-10">
+            <figure id="myMap"></figure>
+        </div>
+    </div>
 </div>
 
 <div class="d-none">
@@ -27,3 +40,5 @@
 <script src="/js/shop&cafeteria-map.js"> </script>
 <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_l8_hZMx6KlAYM47d8i2BZ4vDVX6Becg&callback=initMap"></script>
+
+<script src="/js/rating.js"></script>
