@@ -12,14 +12,14 @@
                 <div class="col-md-6">
                     <div class="profile-head">
                         <h5>
-                            lala
+                            {{user.username}}
                         </h5>
                     </div>
                     <div class="col-md-6">
                         <label>Email</label>
                     </div>
                     <div class="col-md-6">
-                        <p>kshitighelani@gmail.com</p>
+                        <p>{{user.email}}</p>
                     </div>
                 </div>
             </div>
@@ -42,6 +42,8 @@
                                 </div>
                             </div>
                             <a href="/details/{{_id}}/cafeteria" class="btn">Ver cafetería</a>
+                            <a href='/perfil/{{_id}}/borrar' class="btn btn-danger">Quitar cafetería de mis
+                                favoritos </a>
                         </div>
                     </div>
                 </div>
