@@ -1,5 +1,5 @@
 
-# FlatWhite & Mocha
+# Flat White & Mocha
 The website shows different specialty coffee shops in Madrid.
 The coffee shops are listed with their name, photo and a rating.
 By clicking on each card, you can find the coffee shop description and its location
@@ -18,12 +18,19 @@ By clicking on each card, you can find the coffee shop description and its locat
 ```
 #### Server .env variables needed
 PORT=3000
+
 ORIGIN=http://localhost:3000
+
 MONGODB_URI
+
 SESS_SECRET
+
 CLOUDINARY_NAME
+
 CLOUDINARY_KEY
+
 CLOUDINARY_SECRET
+
 GOOGLE_MAPS
 
 ## API Reference
