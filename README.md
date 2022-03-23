@@ -5,7 +5,7 @@ The coffee shops are listed with their name, photo and a rating.
 By clicking on each card, you can find the coffee shop description and its location
 
 ## Authors
-- [@Hiba Berber [WDFTMAD0122] Berber](https://github.com/Hibaber)
+- [@Hiba Berber](https://github.com/Hibaber)
 - [@Laura del Valle](https://github.com/LDVB)
 ## Installation
 #### Install my-project with npm.
