@@ -20,9 +20,6 @@ module.exports = app => {
   const cafeteriasRouter = require('./cafeterias.routes');
   app.use("/", cafeteriasRouter);
 
-  // Shop routes
-  const shopRouter = require('./shop.routes');
-  app.use("/", shopRouter);
 
   // About Coffee routes
   const aboutCoffeeRouter = require('./about-coffee.routes');

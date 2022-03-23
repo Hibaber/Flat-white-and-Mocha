@@ -11,6 +11,8 @@ require("./config")(app);
 require("./config/session.config")(app)
 
 app.locals.appTitle = `Flat White & Mocha`;
+app.locals.GOOGLEMAPS_KEY = process.env.GOOGLEMAPS_KEY;
+app.locals.CLOUDINARY_KEY = process.env.CLOUDINARY_KEY;
 
 
 require("./routes")(app)
