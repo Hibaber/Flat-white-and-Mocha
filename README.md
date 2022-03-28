@@ -8,7 +8,7 @@ By clicking on each card, you can find the coffee shop description and its locat
 https://flat-white-and-mocha.herokuapp.com/
 
 <img width="1415" alt="Captura de pantalla 2022-03-28 a las 17 33 19" src="https://user-images.githubusercontent.com/86075066/160434711-18deb9f7-3ad3-4b48-8a1e-c2a450c33635.png">
-<img width="1394" alt="Captura de pantalla 2022-03-28 a las 17 37 43" src="https://user-images.githubusercontent.com/86075066/160435118-ee84756b-b482-4ffa-bc8b-afc1e30e9fde.png">
+<img width="1386" alt="Captura de pantalla 2022-03-28 a las 17 40 42" src="https://user-images.githubusercontent.com/86075066/160435714-9986f9f3-0d05-46b3-8a73-812e1f783955.png">
 
 
 ## Authors
