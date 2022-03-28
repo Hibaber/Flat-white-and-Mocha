@@ -4,8 +4,12 @@ The website renders different specialty coffee shops in Madrid.
 The coffee shops are listed with their name, photo and a corresponding rating.
 By clicking on each card, you can find the coffee shop description and its location
 
-Deploy on Heroku:
+### Deployment
 https://flat-white-and-mocha.herokuapp.com/
+
+<img width="1415" alt="Captura de pantalla 2022-03-28 a las 17 33 19" src="https://user-images.githubusercontent.com/86075066/160434711-18deb9f7-3ad3-4b48-8a1e-c2a450c33635.png">
+<img width="1394" alt="Captura de pantalla 2022-03-28 a las 17 37 43" src="https://user-images.githubusercontent.com/86075066/160435118-ee84756b-b482-4ffa-bc8b-afc1e30e9fde.png">
+
 
 ## Authors
 - [@Hiba Berber](https://github.com/Hibaber)
