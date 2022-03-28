@@ -1,13 +1,15 @@
 
 # Flat White & Mocha
-The website shows different specialty coffee shops in Madrid.
-The coffee shops are listed with their name, photo and a rating.
+The website renders different specialty coffee shops in Madrid.
+The coffee shops are listed with their name, photo and a corresponding rating.
 By clicking on each card, you can find the coffee shop description and its location
 
 ## Authors
 - [@Hiba Berber](https://github.com/Hibaber)
 - [@Laura del Valle](https://github.com/LDVB)
+
 ## Installation
+
 #### Install my-project with npm.
 ```bash
   npm install

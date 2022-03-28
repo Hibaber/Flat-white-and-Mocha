@@ -29,19 +29,4 @@ router.get('/details/:id/cafeteria', (req, res, next) => {
 });
 
 
-//favoritos usuario 
-
-router.post('/:id/cafeteria', (req, res, next) => {
-
-  const { id } = req.params
-
-  User
-    .findByIdAndUpdate(req.session.currentUser._id, { $push: { "favorites": id } }, { new: true })
-    .then((id1) => console.log(id1))
-    .catch(err => console.log(err))
-
-});
-
-
-
 module.exports = router;

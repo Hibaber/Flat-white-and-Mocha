@@ -1,15 +1,16 @@
 <ion-icon name="cafe-filled"></ion-icon>
-
+<div class="buttons volver">
+    <a href="/cafeterias" class="btn btn-primary">Volver al listado</a>
+</div>
 <div class="container cafeteria">
+
     <div class="row justify-content-center align-items-center">
         <div class="col-5">
             <img src="{{image}}" alt="imagen" class="coffee-shop">
         </div>
         <div class="col-5">
             <h3> Nombre: {{name}}</h3>
-            <p> Tipo de negocio: {{type}}</p>
-            <p> Web / Red social:<a href="http://{{website}}">{{website}}</a></p>
-            <p>Sobre el establecimiento:{{description}}</p>
+            <p> Web / Red social: <a href="http://{{website}}">{{website}}</a></p>
             <p> Puntuación:</p>
 
             <p class="rating" data-rating={{rating}}> Puntuación:</p>
@@ -22,6 +23,7 @@
             </div>
         </div>
     </div>
+
     <div class="row justify-content-center align-items-center mt-5">
         <div class="col-10">
             <figure id="myMap"></figure>

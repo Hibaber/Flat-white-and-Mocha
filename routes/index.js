@@ -19,13 +19,4 @@ module.exports = app => {
   // Cafeterias routes
   const cafeteriasRouter = require('./cafeterias.routes');
   app.use("/", cafeteriasRouter);
-
-
-  // About Coffee routes
-  const aboutCoffeeRouter = require('./about-coffee.routes');
-  app.use("/", aboutCoffeeRouter);
-
-  // Benefits routes
-  const benefitsRouter = require('./benefits.routes');
-  app.use("/", benefitsRouter);
 }
