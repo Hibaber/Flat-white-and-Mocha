@@ -56,14 +56,6 @@ p {
   font-weight: 600;
 }
 
-/* .profile-img{
-
-  border-radius:30px;
-  width:100%;
-  height: 50vh;
-  box-shadow: 0 3px 8px 4px rgb(123, 98, 88, 0.5);
-} */
-
 .profile {
   filter: drop-shadow(0 0 10px #333);
   border-radius: 20px;
@@ -82,11 +74,6 @@ p {
   background: transparent;
 }
 
-/* ----- VIEWS  ----- */
-
-/* --- Layout --- */
-
-/* --- Navbar --- */
 nav {
   font-family: 'Josefin Slab', serif;
   /* margin-bottom:40px; */
@@ -103,7 +90,6 @@ nav {
 .navbar .navbar-brand:hover {
   color: white !important;
 }
-
 
 .navbar-nav {
   display: flex;
@@ -136,22 +122,16 @@ footer {
   color: white;
 }
 
-
-/* --- Index --- */
-
 .indexcontainer {
   align-items: center;
 }
 
 .indexcontainer img {
   width: 100%;
-  height: 820px;
+  height: 910px;
   object-fit: cover;
   object-position: top;
 }
-
-
-/* --- List  --- */
 
 #gallery img {
   width: 100%;
@@ -167,7 +147,6 @@ footer {
 
 #myMap {
   height: 500px;
-  /* width: 500px; */
   background-color: antiquewhite;
 
 }
@@ -187,9 +166,6 @@ footer {
   margin-bottom: 5rem;
 }
 
-/* --- Fav --- */
-
-
 #main-content {
   display: flex;
   width: 364px;
@@ -208,8 +184,6 @@ svg {
 
 
 }
-
-/* --- Profile --- */
 
 .profile-img img {
   width: 70%;
