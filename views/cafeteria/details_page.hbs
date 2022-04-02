@@ -10,7 +10,7 @@
         </div>
         <div class="col-5">
             <h3> Nombre: {{name}}</h3>
-            <p> Web / Red social: <a href="http://{{website}}">{{website}}</a></p>
+            <p> <b>Web / Red social:</b> <a href="http://{{website}}">{{website}}</a></p>
             <p> Puntuación:</p>
 
             <p class="rating" data-rating={{rating}}> Puntuación:</p>
@@ -20,6 +20,7 @@
                 <form action="/delete/{{_id}}/cafeteria" method="POST">
                     <button type="submit" class="btn ml-5">Borrar</button>
                 </form>
+                <button class=" btn add"> Añadir a favoritos</button>
             </div>
         </div>
     </div>
