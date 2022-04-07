@@ -1,24 +1,14 @@
-<script type="text/javascript">
-
-  let favoriteButton = document.querySelector('.add');
-
-  favoriteButton.addEventListener('click', function (e) {
-    addCafeteria('Cue', 'Play');
-  }, false);
-
-</script>
-
-
 <div id="gallery" class="container">
   <ion-icon name="cafe-filled"></ion-icon>
 
   <div class="buttons">
-    <a href="/create-cafeteria" class="btn btn-primary">Crear cafeteria</a>
+    <a href="/create-cafeteria" class="btn">Crear cafeteria</a>
   </div>
 
   <div class="container">
     <div class="row">
-      {{#each cafeteria}}
+
+      {{#each fileteredArr}}
       <div class="col-md-3">
         <div class="card">
           <img src="{{image}}" class="card-img-top" alt="Cafeteria">
@@ -27,10 +17,20 @@
             <div class="rating" data-rating={{rating}}></div>
           </div>
           <a href="/details/{{_id}}/cafeteria" class="btn">Ver cafetería</a>
+
         </div>
       </div>
       {{/each}}
     </div>
+
+    <p class="d-none" id="page"> {{page}}</p>
+
+    <div class="prevNext">
+      <button id="previousPage">Previous</button>
+      <button id="nextPage">Next</button>
+    </div>
+
+    <script src="/js/changePageDOM.js"></script>
     <script src="/js/rating.js"></script>
   </div>
 </div>

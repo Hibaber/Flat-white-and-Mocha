@@ -1,11 +1,23 @@
-<div class=" profile coffeePic">
-    <br>
-    <br>
-    <h1 class="coffee-lover">¡Bienvenid@, coffee lover! ☕☕☕ </h1>
-    <br>
-    <br>
-    <h5> Aquí podrás encontrar las cafeterías con el mejor specialty coffee de Madrid.</h5>
-    <h5> ¿Echas en falta alguna?
-        <a class="btn" href="/cafeterias"> Añadir nueva</a>
-    </h5>
+<div class="container">
+
+    <div class="row">
+        <h2 class="favoritas">Mis cafeterías favoritas</h2>
+        {{#each data}}
+        <div class="col-md-3">
+            <div class="card">
+                <img src="{{image}}" class="card-img-top" alt="Cafeteria">
+                <div class="card-body">
+                    <h5 class="card-title">{{name}}</h5>
+                    <div class="rating" data-rating={{rating}}></div>
+                </div>
+                <a href="/details/{{_id}}/cafeteria" class="btn">Ver cafetería</a>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
 </div>
+</div>
+
+</div>
+<script src="/js/rating.js"></script>

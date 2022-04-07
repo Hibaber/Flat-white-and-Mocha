@@ -23,13 +23,13 @@ router.post('/singup', (req, res, next) => {
 
 
 // Login
+//get
 router.get('/login', (req, res, next) => res.render('auth/login_form'))
 
-
+//post
 router.post('/login', (req, res, next) => {
 
   const { email, userPwd } = req.body
-
 
   User
     .findOne({ email })
@@ -43,8 +43,8 @@ router.post('/login', (req, res, next) => {
         return
       }
 
-      console.log(user);
       req.session.currentUser = user
+      req.app.locals.isLogged = true
       if (user.role === 'USER')
         res.redirect('/user-profile')
       else
@@ -56,8 +56,10 @@ router.post('/login', (req, res, next) => {
 
 // Logout
 router.get('/logout', (req, res, next) => {
+  req.app.locals.isLogged = false
   req.session.destroy(() => res.redirect('/login'))
 })
+
 
 
 

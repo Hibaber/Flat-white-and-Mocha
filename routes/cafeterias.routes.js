@@ -5,21 +5,48 @@ const User = require("../models/User.model");
 const { isLoggedIn, checkRole } = require("../middleware/route-guard");
 
 // Cafeteria List
+let prevPage = 0
+let nextPage = 0
 
-router.get('/cafeterias', (req, res, next) => {
+router.get("/cafeterias", (req, res, next) => {
+
+  const { page } = req.query // Gracias a esto, en la URL hay que ir a /cafetria?page=1
+
+  switch (page) {
+    case '1':
+      prevPage = 0
+      nextPage = 8
+      break;
+    case '2':
+      prevPage = 9
+      nextPage = 8
+      break;
+    case '3':
+      prevPage = 10
+      nextPage = 8
+      break;
+    case '4':
+      prevPage = 11
+      nextPage = 8
+    default:
+      break;
+  }
 
   Cafeteria
     .find()
-    .then(cafeteria => res.render('cafeteria/list_page', { cafeteria }))
-    .catch(err => console.log(err))
+    .then((cafeteria) => {
+      const fileteredArr = cafeteria.splice(prevPage, nextPage)
+      console.log(fileteredArr);
+      res.render("cafeteria/list_page", { fileteredArr, page });
+    })
+    .catch((err) => console.log(err));
 });
 
-//Details Cafeteria
 
+//Details Cafeteria
 router.get('/details/:id/cafeteria', (req, res, next) => {
 
   const { id } = req.params
-
 
   Cafeteria
     .findById(id)
@@ -31,20 +58,18 @@ router.get('/details/:id/cafeteria', (req, res, next) => {
 
 router.post('/details/:id/cafeteria', isLoggedIn, (req, res, next) => {
 
-  const cafeteria = { cafeteria }
-  const { cafeteriaId } = req.params
+  const { id } = req.params
+  const { _id: userId } = req.session.currentUser;
 
-
-  if (!cafeteria.includes(cafeteria)) {
+  if (!req.session.currentUser.favorites.includes(id)) {
     User
-      .findByIdAndUpdate(cafeteriaId, { $push: { favorites: cafeteriaId } }, { new: true })
-      .then(cafeteria => res.render('user/profile_page'))
+      .findByIdAndUpdate(userId, { $push: { favorites: id } })
+      .then(() => res.redirect('/user-profile'))
       .catch(err => next(err))
   } else {
-    res.redirect(`cafeteria/details_page`)
+    res.redirect(`/user-profile`)
   }
 })
-
 
 
 module.exports = router;

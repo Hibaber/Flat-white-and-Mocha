@@ -88,13 +88,12 @@ p {
   background-color: #7b6258;
   border: none;
   color: white;
+
+
 }
-
-
 
 nav {
   font-family: 'Josefin Slab', serif;
-  /* margin-bottom:40px; */
   font-size: 20px;
   display: flex;
   align-items: center;
@@ -141,7 +140,6 @@ footer {
 }
 
 .coffeePic {
-
   margin-top: 100px;
   margin-bottom: 100px;
   margin-left: 400px;
@@ -149,13 +147,6 @@ footer {
 
 .indexcontainer {
   align-items: center;
-}
-
-.gif {
-
-  display: flex;
-  justify-content: flex-start;
-
 }
 
 .indexcontainer img {
@@ -173,9 +164,11 @@ footer {
 }
 
 #myMap {
-  height: 500px;
+  height: 360px;
   background-color: antiquewhite;
-
+  border-radius: 20px;
+  margin-bottom: 30px;
+  filter: drop-shadow(0 0 10px rgb(211, 203, 203));
 }
 
 .buttons {
@@ -186,6 +179,41 @@ footer {
 
 .buttons button {
   margin: 20px;
+}
+
+#previousPage,
+#nextPage {
+
+  text-decoration: none;
+  color: #7b6258;
+  font-weight: bold;
+  border: 1px solid #7b6258;
+  border-radius: 20px;
+  width: 90px;
+  height: 21px;
+  text-align: center;
+  margin-right: 15px;
+
+}
+
+.favoritas {
+
+  margin-top: 50px;
+  margin-bottom: 80px;
+
+  text-align: center;
+
+}
+
+.next-button:hover {
+  color: gray;
+}
+
+.prevNext {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+
 }
 
 .popino {
@@ -200,20 +228,6 @@ footer {
   align-items: center;
   justify-content: center;
   text-align: center;
-}
-
-svg {
-  width: 49px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-.profile-img img {
-  width: 70%;
-  height: 100%;
-  text-align: center;
-  margin-bottom: 20px;
 }
 
 .volver {
