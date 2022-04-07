@@ -3,11 +3,9 @@
 
 The website renders different specialty coffee shops in Madrid.
 
-The coffee shops are listed with their name, picture and a rating.
+The coffee shops are listed by their name, picture and a rating.
 
-By clicking on each card, you can find out more about the coffee shop, its description and its location.
-
-Also, you can add your favorite coffee shops to your list if you create user account:)
+By clicking on each card, you can find out more about the coffee shop, its description and its location and add it to your favorites list if you create a user account :)
 
 ### Deployment
 https://flat-white-and-mocha.herokuapp.com/
