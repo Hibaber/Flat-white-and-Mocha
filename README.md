@@ -1,14 +1,18 @@
 
 # Flat White & Mocha
+
 The website renders different specialty coffee shops in Madrid.
-The coffee shops are listed with their name, photo and a corresponding rating.
-By clicking on each card, you can find the coffee shop description and its location
+
+The coffee shops are listed by their name, picture and a rating.
+
+By clicking on each card, you can find out more about the coffee shop, its description and its location and add it to your favorites list if you create a user account :)
 
 ### Deployment
 https://flat-white-and-mocha.herokuapp.com/
 
-<img width="1415" alt="Captura de pantalla 2022-03-28 a las 17 33 19" src="https://user-images.githubusercontent.com/86075066/160434711-18deb9f7-3ad3-4b48-8a1e-c2a450c33635.png">
-<img width="1386" alt="Captura de pantalla 2022-03-28 a las 17 40 42" src="https://user-images.githubusercontent.com/86075066/160435714-9986f9f3-0d05-46b3-8a73-812e1f783955.png">
+![Captura de pantalla 2022-04-07 a las 14 00 57](https://user-images.githubusercontent.com/86075066/162196106-6ce18d94-a3b8-47c6-ab3d-c28f8d7504c1.png)
+![Captura de pantalla 2022-04-07 a las 14 12 39](https://user-images.githubusercontent.com/86075066/162196130-dad90b87-29f6-48c0-b3be-9ce164d80ac5.png)
+![Captura de pantalla 2022-04-07 a las 14 13 09](https://user-images.githubusercontent.com/86075066/162196149-8651a809-0f6e-4c4d-a31c-179c409064fd.png)
 
 
 ## Authors
