@@ -18,52 +18,50 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/queries.css">
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">Flat White & Mocha</a>
-        <ul class="nav justify-content-end">
-          <li class="nav-item">
-            <a
-              class="nav-link active"
-              aria-current="page"
-              href="/cafeterias?page=1"
-            >Cafeterías</a>
-          </li>
-          {{#unless isLogged}}
-            <li class="nav-item">
-              <a class="nav-link" href="/login">Log-in</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/singup">Sign-up</a>
-            </li>
-          {{/unless}}
 
-          {{#if isLogged}}
-            <li class="nav-item">
-              <a class="nav-link" href="/user-profile">Mi perfil</a>
+  <header class="header">
+      <nav class="navbar">
+          <a class="navbar-brand" href="/">Flat White & Mocha</a>
+            <ul class="nav">
+              <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="/cafeterias?page=1"
+              >Cafeterías</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/logout">Log-out</a>
-            </li>
+            {{#unless isLogged}}
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Log-in</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/singup">Sign-up</a>
+              </li>
+            {{/unless}}
 
-          {{/if}}
-        </ul>
-        <div class="hide">
-          <i class="fa fa-bars" aria-hidden="true"> Menu</i>
-         
-        </div>
-        <script src="https: code.jquery.com jquery-1.12.4.min.js>" </script>
-        <script>
-          $(".hide").on ("click", function()){ $("nav ul").toggle("slow") }
-        </script>
+            {{#if isLogged}}
+              <li class="nav-item">
+                <a class="nav-link" href="/user-profile">Mi perfil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Log-out</a>
+              </li>
 
-      </div>
-    </nav>
+            {{/if}}
+          </ul>
+   
+      </nav>
+       <button class="btn-mobile-nav">
+            <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+            <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header> 
 
-    {{{body}}}
+   {{{body}}}
 
     <footer>
       Made with ❤️ by 2 coffee lovers: Hiba Berber & Laura Del Valle
@@ -75,7 +73,7 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
-
-</html>
+</html> 
