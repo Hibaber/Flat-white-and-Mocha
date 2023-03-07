@@ -1,5 +1,5 @@
 <ion-icon name="cafe-filled"></ion-icon>
-<div class="buttons volver">
+<div class="buttons goBack">
     <a href="/cafeterias" class="btn">Volver al listado</a>
 </div>
 <div class="container cafeteria">
@@ -10,11 +10,11 @@
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6">
             <h3> {{name}}</h3>
-            <p> <b>Web: </b> <a href="http://{{website}}">{{website}}</a></p>
-            <p> Puntuación:</p>
+            <p> <a href="http://{{website}}">{{website}}</a></p>
+           
 
-            <p class="rating" data-rating={{rating}}> Puntuación:</p>
-            <p>Transporte más cercano: {{transport}}</p>
+            <p class="rating" data-rating={{rating}}> </p> 
+        
             <div class="buttons">
                 
                 <form action="/edit/{{_id}}/cafeteria" method="POST">
@@ -24,7 +24,7 @@
                     <button type="submit" class="btn ml-5">Borrar</button>
                 </form>
                 <form action="/details/{{_id}}/cafeteria" method="POST">
-                    <button type="submit" class="btn ml-5">Añadir a favoritos</button>
+                    <button type="submit" class="btn ml-5 heart">♡</button></button>
                 </form>
 
             </div>

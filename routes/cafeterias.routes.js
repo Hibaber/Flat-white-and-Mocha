@@ -54,7 +54,7 @@ router.get('/details/:id/cafeteria', (req, res, next) => {
     .catch(err => console.log(err))
 });
 
-// Add to favorits
+// Add to favorites
 
 router.post('/details/:id/cafeteria', isLoggedIn, (req, res, next) => {
 

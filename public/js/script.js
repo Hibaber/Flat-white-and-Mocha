@@ -1,7 +1,7 @@
 document.addEventListener(
   "DOMContentLoaded",
   () => {
-    console.log("coffee-project JS imported successfully!");
+    console.log("Kffeine JS was imported successfully!");
   },
   false
 );

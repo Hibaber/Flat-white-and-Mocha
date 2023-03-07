@@ -1,12 +1,16 @@
-<div id="gallery" class="container">
-  <ion-icon name="cafe-filled"></ion-icon>
 
-  <div class="buttons create">
-    <a href="/create-cafeteria" class="btn">Crear cafeteria</a>
+
+<div id="gallery" class="container">
+  
+
+  <div class="buttons createBtn">
+    <a href="/create-cafeteria" class="btn">Añadir cafeteria</a>
   </div>
 
   <div class="container cafeterias">
+    
     <div class="row">
+      
 
       {{#each fileteredArr}}
       <div class=" col-lg-3 col-md-4 col-sm-6">
@@ -26,8 +30,8 @@
     <p class="d-none" id="page"> {{page}}</p>
 
     <div class="prevNext">
-      <button id="previousPage">Previous</button>
-      <button id="nextPage">Next</button>
+      <button id="previousPage">Previa</button>
+      <button id="nextPage">Siguiente</button>
     </div>
 
     <script src="/js/changePageDOM.js"></script>
