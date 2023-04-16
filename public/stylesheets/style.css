@@ -79,7 +79,7 @@ nav {
 }
 
 footer {
-  position: absolute;
+  position:fixed;
   background-color: #7b6258;
   width: 100%;
   padding: 17px 0;
@@ -183,32 +183,9 @@ footer {
 }
 
 /* MOBILE NV */
-.btn-mobile-nav {
-  border: none;
-  background: none;
-  cursor: pointer;
-  display: none;
-}
-
-.nav-link {
-  display: inline-block;
-  text-decoration: none;
-  color: #ccc;
-  font-weight: 500;
-
-}
-
-.icon-mobile-nav {
-  height: 3.5rem;
-  width: 3.5rem;
-  color: #333;
-}
-
-.icon-mobile-nav[name="close-outline"] {
-  display: none;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
+.open-btn, .close-btn{
+  border:none;
+  display:none;
+  background-color: transparent;
+  display: disabled;
 }
