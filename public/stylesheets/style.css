@@ -1,3 +1,13 @@
+
+
+
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+
+}
+ 
 img {
   width: 100%;
 }
@@ -56,22 +66,6 @@ p {
   color: white;
 }
 
-nav {
-  font-family: "Josefin Slab", serif;
-  font-size: 20px;
-  display: flex;
-  background-color: #7b6258;
-  position: fixed;
-  width: 100%;
-  padding:20px;
-
-}
-
-.navbar .nav-link,
-.navbar .navbar-brand,
-.navbar .navbar-brand:hover {
-  color: white !important;
-}
 
 .card {
   margin: 10px;
@@ -182,10 +176,78 @@ footer {
   margin-top: 50px;
 }
 
-/* MOBILE NV */
-.open-btn, .close-btn{
-  border:none;
-  display:none;
-  background-color: transparent;
-  display: disabled;
+.header{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:1rem;
+  background-color: #7b6258;
 }
+.nav-list{
+  display:flex;
+  list-style: none;
+  gap:1rem;
+}
+.nav-list li a {
+  text-decoration: none;
+  color:white
+}
+.close-btn, .open-btn{
+  display:none;
+  border:none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color:white;
+}
+ 
+
+.logo{
+  text-decoration: none;
+  color: white
+}
+
+.logo:hover{
+  color:white;
+}
+
+   
+@media  screen and (max-width: 550px){
+   .open-btn,.close-btn{
+    display:block;
+    
+  }
+  
+  .nav{
+  position: absolute;
+  opacity:0;
+  visibility: hidden;
+  display:flex;
+  flex-direction: column;
+  align-items: end;
+  top:0;
+  right:0;
+  background-color: #765b50;
+  height: 150px;
+  gap:1rem;
+  }
+
+  .nav.visible{
+    opacity:1;
+    visibility: visible;
+  }
+  .nav-list{
+    flex-direction: column;
+    align-items: end;
+    padding-right: 1rem;
+    gap:1rem;
+   
+  }
+
+ .header{
+  height: 150px;;
+ }
+ 
+}
+
+

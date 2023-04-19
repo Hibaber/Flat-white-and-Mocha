@@ -17,3 +17,4 @@ if (page.innerHTML > 0) {
         }
     }
 }
+
