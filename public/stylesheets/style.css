@@ -248,6 +248,23 @@ footer {
   height: 150px;;
  }
  
+ .myMap{
+  margin-bottom: 10px;;
+ }
+ .coffee-shop{
+  margin-bottom: 13px;
+ }
+ .centRes{
+  text-align: center;
+  
+ }
+ .buttons{
+  display: flex;
+  justify-content: center;
+ }
+ .coffeShopName{
+  margin-top: 20px;
+ }
 }
 
 

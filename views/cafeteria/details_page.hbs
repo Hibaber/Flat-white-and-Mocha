@@ -1,4 +1,4 @@
-<ion-icon name="cafe-filled"></ion-icon>
+
 <div class="buttons goBack">
     <a href="/cafeterias" class="btn">Volver al listado</a>
 </div>
@@ -8,24 +8,25 @@
         <div class="col-lg-5 col-md-5 col-sm-12">
             <img src="{{image}}" alt="imagen" class="coffee-shop">
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-6">
-            <h3> {{name}}</h3>
-            <p> <a href="http://{{website}}">{{website}}</a></p>
-           
-
-            <p class="rating" data-rating={{rating}}> </p> 
-        
+        <div class="col-lg-4 col-md-4 col-sm-6 centRes">
+            <h3 class="coffeShopName" > {{name}}</h3>
+            <p > <a href="http://{{website}}">{{website}}</a></p>
+            <p class="rating"  data-rating={{rating}}> </p> 
             <div class="buttons">
-                
-                <form action="/edit/{{_id}}/cafeteria" method="POST">
-                    <a href="/edit/{{_id}}/cafeteria" class="btn btn ml-5 ">Editar</a>
-                </form>
+                {{#unless isLogged}}
                 <form action="/delete/{{_id}}/cafeteria" method="POST">
                     <button type="submit" class="btn ml-5">Borrar</button>
                 </form>
                 <form action="/details/{{_id}}/cafeteria" method="POST">
                     <button type="submit" class="btn ml-5 heart">Añadir a favoritos</button>
                 </form>
+            {{/unless }}
+            {{#if isLogged}}
+            <form action="/edit/{{_id}}/cafeteria" method="POST">
+                <a href="/edit/{{_id}}/cafeteria" class="btn btn ml-5 ">Editar</a>
+            </form>
+            {{/if}}
+                
 
             </div>
         </div>
