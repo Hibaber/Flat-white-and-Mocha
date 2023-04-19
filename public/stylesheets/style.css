@@ -117,7 +117,7 @@ footer {
   height: 360px;
   background-color: antiquewhite;
   border-radius: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
   filter: drop-shadow(0 0 10px rgb(211, 203, 203));
 }
 
@@ -185,12 +185,14 @@ footer {
 }
 .nav-list{
   display:flex;
+  align-items: center;
   list-style: none;
   gap:1rem;
 }
 .nav-list li a {
   text-decoration: none;
-  color:white
+  color:white;
+
 }
 .close-btn, .open-btn{
   display:none;
@@ -249,7 +251,7 @@ footer {
   height: 150px;;
  }
  
- .myMap{
+ #myMap{
   margin-bottom: 20px;;
  }
  .coffee-shop{
