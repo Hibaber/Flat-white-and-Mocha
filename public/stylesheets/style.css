@@ -230,6 +230,7 @@ footer {
   background-color: #765b50;
   height: 150px;
   gap:1rem;
+
   }
 
   .nav.visible{
@@ -249,14 +250,14 @@ footer {
  }
  
  .myMap{
-  margin-bottom: 10px;;
+  margin-bottom: 20px;;
  }
  .coffee-shop{
   margin-bottom: 13px;
  }
  .centRes{
   text-align: center;
-  
+
  }
  .buttons{
   display: flex;
@@ -264,6 +265,16 @@ footer {
  }
  .coffeShopName{
   margin-top: 20px;
+ }
+
+ .footer{
+  margin-top: 20px;;
+ }
+ .goBack {
+   margin: 10px 0 auto;
+ }
+ .loginForm, .signupForm{
+  margin:50 auto;
  }
 }
 
