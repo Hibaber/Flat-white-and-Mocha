@@ -14,20 +14,20 @@
             <p class="rating"  data-rating={{rating}}> </p> 
             <div class="buttons">
                 {{#unless isLogged}}
-                <form action="/delete/{{_id}}/cafeteria" method="POST">
-                    <button type="submit" class="btn ml-5">Borrar</button>
-                </form>
+               
                 <form action="/details/{{_id}}/cafeteria" method="POST">
-                    <button type="submit" class="btn ml-5 heart">Añadir a favoritos</button>
+                    <button type="submit" class="btn ml-5">Añadir a favoritos</button>
                 </form>
             {{/unless }}
             {{#if isLogged}}
             <form action="/edit/{{_id}}/cafeteria" method="POST">
                 <a href="/edit/{{_id}}/cafeteria" class="btn btn ml-5 ">Editar</a>
             </form>
+            <form action="/delete/{{_id}}/cafeteria" method="POST">
+                <button type="submit" class="btn ml-5">Borrar</button>
+            </form>
             {{/if}}
                 
-
             </div>
         </div>
     </div>

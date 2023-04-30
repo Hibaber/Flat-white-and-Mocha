@@ -30,6 +30,18 @@ p {
   font-size: 15px;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #7b6258;
+}
+
+.container {
+  padding: 20px;
+  margin-bottom: 40px;
+}
 #errorMessage {
   margin-top: 20px;
   color: #333;
@@ -38,11 +50,6 @@ p {
 .loginForm,
 .signupForm {
   margin:  150px auto;
-}
-
-.container {
-  padding: 20px;
-  margin-bottom: 40px;
 }
 
 .cafeteria {
@@ -65,8 +72,6 @@ p {
   border: none;
   color: white;
 }
-
-
 .card {
   margin: 10px;
   text-align: center;
@@ -176,22 +181,18 @@ footer {
   margin-top: 50px;
 }
 
-.header{
-  display:flex;
-  align-items: center;
-  justify-content: space-between;
-  padding:1rem;
-  background-color: #7b6258;
-}
+
 .nav-list{
   display:flex;
-  align-items: center;
   list-style: none;
+  text-align: center;
   gap:1rem;
 }
 .nav-list li a {
   text-decoration: none;
   color:white;
+ 
+  line-height: center;
 
 }
 .close-btn, .open-btn{
@@ -219,7 +220,9 @@ footer {
     display:block;
     
   }
-  
+  .headerRes{
+    height: 150px;
+  }
   .nav{
   position: absolute;
   opacity:0;
@@ -238,6 +241,7 @@ footer {
   .nav.visible{
     opacity:1;
     visibility: visible;
+    z-index: 50;
   }
   .nav-list{
     flex-direction: column;
@@ -246,20 +250,22 @@ footer {
     gap:1rem;
    
   }
-
- .header{
-  height: 150px;;
- }
+/* .indexcontainer{
+  z-index: -1;
+} */
+ /* .header{
+  z-index: 500;
+ } */
  
  #myMap{
-  margin-bottom: 20px;;
+  margin-bottom: 10px;
+  height: 250px;
  }
  .coffee-shop{
   margin-bottom: 13px;
  }
  .centRes{
   text-align: center;
-
  }
  .buttons{
   display: flex;
@@ -273,10 +279,13 @@ footer {
   margin-top: 20px;;
  }
  .goBack {
-   margin: 10px 0 auto;
+   margin: 20px 0 auto;
  }
  .loginForm, .signupForm{
   margin:50 auto;
+ }
+ .addBtn{
+margin-bottom: 0px;
  }
 }
 
