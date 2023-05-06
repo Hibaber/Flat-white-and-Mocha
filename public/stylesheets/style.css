@@ -42,6 +42,10 @@ p {
   padding: 20px;
   margin-bottom: 40px;
 }
+
+.indexcontainer img{
+  height: 100%;
+}
 #errorMessage {
   margin-top: 20px;
   color: #333;
@@ -78,15 +82,17 @@ p {
 }
 
 footer {
-  position:fixed;
+
   background-color: #7b6258;
   width: 100%;
   padding: 17px 0;
   display: flex;
   justify-content: center;
   color: white;
-  height: 3.5rem;
+  height: 4.5rem;
   bottom: 0;
+
+      
       
   
 }
@@ -232,7 +238,7 @@ footer {
   align-items: end;
   top:0;
   right:0;
-  background-color: #765b50;
+  background-color: #765b508a;
   height: 150px;
   gap:1rem;
 
@@ -241,7 +247,7 @@ footer {
   .nav.visible{
     opacity:1;
     visibility: visible;
-    z-index: 50;
+    
   }
   .nav-list{
     flex-direction: column;
@@ -250,12 +256,6 @@ footer {
     gap:1rem;
    
   }
-/* .indexcontainer{
-  z-index: -1;
-} */
- /* .header{
-  z-index: 500;
- } */
  
  #myMap{
   margin-bottom: 10px;
@@ -275,9 +275,7 @@ footer {
   margin-top: 20px;
  }
 
- .footer{
-  margin-top: 20px;;
- }
+
  .goBack {
    margin: 20px 0 auto;
  }
